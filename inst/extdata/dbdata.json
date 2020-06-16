@@ -1,0 +1,72 @@
+[
+  {
+    "name": "DEV",
+    "type": "sqlserver",
+    "connstring": "",
+    "server": "serveraddress1",
+    "initdb": "A",
+    "istrusted": true,
+    "user": "",
+    "pass": ""
+  },
+  {
+    "name": "PRD",
+    "type": "oracle",
+    "connstring": null,
+    "server": "serveraddress2",
+    "initdb": null,
+    "istrusted": false,
+    "user": "a1",
+    "pass": null
+  },
+  {
+    "name": "XXX",
+    "type": "sqlserver",
+    "connstring": null,
+    "server": "tcp:xxxxx.database.windows.net,1433",
+    "initdb": "XXX",
+    "istrusted": false,
+    "user": "XXX",
+    "pass": ""
+  },
+  {
+    "name": "LOCAL",
+    "type": "sqlserver",
+    "connstring": null,
+    "server": "localhost,1433",
+    "initdb": "XXX",
+    "istrusted": false,
+    "user": "xxx",
+    "pass": ""
+  },
+  {
+    "name": "LOCALMYSQL",
+    "type": "mysql",
+    "connstring": null,
+    "server": "localhost",
+    "initdb": "TEACHING",
+    "istrusted": false,
+    "user": "user_1",
+    "pass": ""
+  },
+  {
+    "name": "LOCALEXPRESS",
+    "type": "sqlserver",
+    "connstring": null,
+    "server": "localhost,14433",
+    "initdb": "TEACHING",
+    "istrusted": false,
+    "user": "user_1",
+    "pass": ""
+  },
+  {
+    "name": "SB",
+    "type": "sybaseiq",
+    "connstring": null,
+    "server": "testserver;port=9903",
+    "initdb": "SYBASEID",
+    "istrusted": false,
+    "user": "user_2",
+    "pass": ""
+  }
+]

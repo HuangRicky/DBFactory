@@ -1,0 +1,14 @@
+Package: DBFactory
+Type: Package
+Title: Database Connection Factory
+Version: 0.1.7
+Author: Ruokun Huang <hruokun.2008@gmail.com>
+Maintainer: Ruokun Huang <hruokun.2008@gmail.com>
+Description: Convenient package for you to organize database connections
+    Use a nickname for your own server
+License: GPL-3
+Imports: jsonlite, DBI
+Suggests: odbc, pool
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0
