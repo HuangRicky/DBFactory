@@ -179,6 +179,29 @@ run_query <- function(stmt, dbobj=NULL, keepcnxn=F){
   run(dbobj)
 }
 
+#' disconnect the connection saved in env
+#' @param type type of connection. sqlserver, mysql, sybaseiq, oracle
+#' @export
+DBFactory_disconnect <- function(type='sqlserver', returnerr=F){
+  cnxnname <- paste0(type, '_cnxn')
+  if(exists(cnxnname,.DBFactoryEnv) && !is.null(get(cnxnname,.DBFactoryEnv))){
+    channel <- get(cnxnname,.DBFactoryEnv)
+    r <- tryCatch(DBI::dbDisconnect(channel),error=function(e){
+      if(returnerr){
+        message(e)
+      }
+      as.character(e)
+    })
+    return(r)
+  } else {
+    # doesn't need to return anything.
+    if(returnerr){
+      warning(paste0("No connection available: ", cnxnname))
+    }
+  }
+  invisible()
+}
+
 #' Get or Set Pool connection
 #' @param constr connection string
 #' @return a pool driver
